@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video{
+    position: relative;
+    min-height: 50rem;
+    max-height: 70rem;
+    overflow: hidden;
+    .overlay{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inset: 0; /* se utiliza para que la propiedad tenga el tama;o del padre. */
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 60%),
+            rgba(darken(v.$morado, 20%), 90%)
+        );
+        
+    }
+    video{
+        display: block;
+        width: auto;
+        @include m.tablet{
+            width: 100%;
+        }
+    }
+}
+.contenido-video{
+    z-index: 10;
+
+    h2{
+        font-size: 7rem;
+        color: v.$blanco;
+        margin: 0;
+    }
+    p {
+        color:v.$blanco;
+        background-color: v.$rosa;
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin: 0;
+        font-weight: 900;
+        font-size: 2.4rem;
+    }
+}

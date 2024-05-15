@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$negro, .5);
+    display: grid;
+    place-items: center;
+
+    // Con esto inicamos nuestra animacion propia creada
+    //Primera valor toma el nombre de la animacion, el segundo el tipo de animacion y el tercero la duracion de la animacion.
+    animation: fadeIn ease-in .5s;
+
+    &.fadeOut{
+    animation: fadeOut ease-in .5s;
+    }
+    img {
+        max-width: 100rem;
+    }
+    //Animamos boton cerrar
+    .boton-cerrar{
+        display: grid;
+        place-items: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        color: v.$negro;
+        background-color: v.$blanco;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+
+    }
+}
+
+
+
+//Creamos animacion propia
+@keyframes fadeIn {
+    //Cuando comienza la animacion
+    0%{
+        opacity: 0;
+    }
+    //Cuando la animacion llega a su fin
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    //Cuando comienza la animacion
+    0%{
+        opacity: 1;
+    }
+    //Cuando la animacion llega a su fin
+    100%{
+        opacity: 0;
+    }
+}

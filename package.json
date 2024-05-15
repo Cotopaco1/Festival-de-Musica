@@ -1,0 +1,27 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y NPM",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "GULP"
+  ],
+  "author": "Sergio silva sanchez @cotopaco",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.0"
+  },
+  "devDependencies": {
+    "glob": "^10.3.15",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sharp": "^0.33.3"
+  }
+}

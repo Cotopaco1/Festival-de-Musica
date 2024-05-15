@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria{
+    @include m.contenedor;
+    .galeria-imagenes{
+        @include m.grid(1, 2rem);
+
+        @include m.telefono{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include m.tablet{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include m.desktop{
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        img{
+            object-fit: cover;
+            height: 20rem; 
+        }
+    }
+}
